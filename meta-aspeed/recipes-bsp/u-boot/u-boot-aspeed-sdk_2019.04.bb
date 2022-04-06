@@ -8,6 +8,7 @@ require recipes-bsp/u-boot/u-boot.inc
 PROVIDES += "u-boot"
 DEPENDS += "bc-native dtc-native"
 
+SRC_URI:append:uboot-flash-32768 = "file://u-boot_flash_32M.cfg"
 SRC_URI:append:uboot-flash-65536 = "file://u-boot_flash_64M.cfg"
 SRC_URI:append:df-phosphor-mmc = " file://u-boot-env-ast2600.txt"
 SRC_URI += " \
